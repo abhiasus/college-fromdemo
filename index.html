@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2f5d62;
+            margin: 0px;
+        }
+        .form-container{
+            max-width: 770px;
+            margin: auto;
+            background: #12343b;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px;
+            color: #fff;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        label{
+            display: block;
+            margin-bottom: 12px;
+        }
+        input,select{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            
+        }
+        input[type="radio"],
+        input[type="checkbox"]{
+            width: auto;
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"]{
+            width: auto;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            
+            margin-right: 10px;
+        }
+        input[type="submit"]{
+            background: #130688;
+            color: #fff;
+            
+        }
+        input[type="reset"]{
+            background: transparent;
+            color: #fff;
+            
+        }
+        input[type="Search"],
+        input[type="Date"],
+        input[type="Time"],
+        input[type="Date Time Local"],
+        input[type="Month"],
+        input[type="Week"]{
+            width:100;
+            padding:10px;
+            border:2px solid #f5efef;
+            border-radius: 20px;
+        }
+        input[type="Range"]{
+            width:100%;
+        }
+         input[type="Color"]{
+            width:100%;
+            height: 50px;
+            border:name;
+            cursor:pointer;
+         }
+          input[type="Image"]{
+            width: 300px;
+            cursor:pointer;
+        }
+        .navbar{
+            padding-top: 0;
+            background-color: #1a6088;
+            padding: 15px 50px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 70px;
+          }
+          .navbar-brand{
+            color: #f5efef;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .nav-links{
+            display:flex;
+            gap:30px;
+            list-style: none;
+          }
+          .nav-links a{
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+          }
+          .nav-links a:hover{
+            color: rgb(235, 180, 99);
+            background-color: brown;
+            padding:7px 7px;
+            border-radius: 5px;
+          }
+        table {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+th {
+    background-color: #1a6088;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    color: #222;
+}
+
+/* Even rows */
+tr:nth-child(even) {
+    background-color: #e8f1f5;
+}
+
+/* Odd rows */
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Mouse hover */
+tr:hover {
+    background-color: #a8d8e8;
+    cursor: pointer;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    padding-top: 50px;
+} 
+        footer{
+            background-color: black;
+            color: rgb(20, 93, 156);
+            padding: 50px 70px 20px;
+        }
+        .footer-container{
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .footer-column{
+            width: 25%;
+        }
+        .footer-column h3{
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: rgb(235, 180, 99);
+        }
+        .footer-column p{
+            color: aliceblue;
+            
+            font-size: 14px;
+        }
+        .footer-column ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li{
+            margin-bottom: 12px;
+        }
+        .footer-column ul li a{
+            text-decoration: none;
+            color: chocolate;
+            font-size: 14px;
+        }
+        
+        .newsletter{
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .newsletter input{
+            
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+        .footer-bottom{
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 30px;
+            padding-top: 15px;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">ssmrv college</a>
+            <ul class="nav-links">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about </a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h2>Student Form</h2>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="full name">full name</label>
+                <input type="text" id="full name" placeholder="enter the full name ">
+            </div>
+
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" id="email" placeholder="enter the email ">
+            </div>
+
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" id="password" placeholder="enter the password ">
+            </div>
+
+            <div class="form-group">
+                <label for="age">age</label>
+                <input type="number" id="age" min="18" max="50" placeholder="enter the age ">
+            </div>
+
+            <div class="form-group">
+                <label>gender :</label>
+                <label><input type="radio" name="gender" value="male">male</label>
+                <label><input type="radio" name="gender" value="female">female</label>
+            </div>
+
+            <div class="form-group">
+                <label>FACILITIES  :</label>
+                <label><input type="checkbox" name="FACILITIES" value=" HOSTEL">HOSTEL</label>
+                <label><input type="checkbox" name="FACILITIES" value=" LIBRARY">LIBRARY</label>
+                <label><input type="checkbox" name="FACILITIES" value=" BUS">BUS</label>
+                <label><input type="checkbox" name="FACILITIES" value=" SPORTS">SPORTS</label>
+            </div>
+
+            <div class="form-group">
+                <label>select course</label>
+                <select name="course">
+                    <option value="">select course</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BCOM">BCOM</option>
+                    <option value="BBA">BBA</option>
+                </select>
+            </div>
+            <!--Search-->
+            <div class="form-group">
+                <label for="--Search--">Search course:</label>
+                <input type="search" id="search" placeholder="Search your course">
+            </div>
+            <!--Range-->
+            <div class="form-group">
+                <label for="range">Select your range of interest in the course:</label>
+                <input type="range" id="range" min="0" max="10">
+            </div>
+            <!--Date-->
+            <div class="form-group">
+                <label for="date">Select admission date :</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <!--Time-->
+            <div class="form-group">
+                <label for="time">Select counselling time:</label>
+                <input type="time" id="time" name="time">
+            </div>
+            <!--Date Time Local-->
+            <div class="form-group">
+                <label for="datetime">Select Date & Time of counselling :</label>
+                <input type="datetime-local" id="datetime" name="datetime">
+            </div>
+            <!--Month-->
+            <div class="form-group">
+                <label for="month">Select  admission Month:</label>
+                <input type="month" id="month" name="month">
+            </div>
+            <!--Week-->
+            <div class="form-group">
+                <label for="week">Select orientation  Week:</label>
+                <input type="week" id="week" name="week">
+            </div>
+            <!--Color-->
+            <div class="form-group">
+                <label for="color">Select your favorite color:</label>
+                <input type="color" id="color" name="color" value="#2f5d62">
+            </div>
+            
+            
+            <input type="submit" value="submit">
+            <input type="reset" value="clear">
+        </form>
+    </div>
+    
+    <h1>COURSE LIST</h1>
+
+<table>
+    <tr>
+        <th>SN</th>
+        <th>Course</th>
+        <th>Duration</th>
+        <th>Fees</th>
+        <th>Extra Course</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>BCA</td>
+        <td>3 Years</td>
+        <td>₹90,000</td>
+        <td>Python</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>B.Com</td>
+        <td>3 Years</td>
+        <td>₹75,000</td>
+        <td>Tally</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>BBA</td>
+        <td>3 Years</td>
+        <td>₹85,000</td>
+        <td>Digital Marketing</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>BCA</td>
+        <td>3 Years</td>
+        <td>₹90,000</td>
+        <td>Web Development</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>B.Com</td>
+        <td>3 Years</td>
+        <td>₹75,000</td>
+        <td>GST</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>BBA</td>
+        <td>3 Years</td>
+        <td>₹85,000</td>
+        <td>Business Analytics</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>BCA</td>
+        <td>3 Years</td>
+        <td>₹90,000</td>
+        <td>Data Analytics</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>B.Com</td>
+        <td>3 Years</td>
+        <td>₹75,000</td>
+        <td>Financial Accounting</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>BBA</td>
+        <td>3 Years</td>
+        <td>₹85,000</td>
+        <td>Entrepreneurship</td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>BCA</td>
+        <td>3 Years</td>
+        <td>₹90,000</td>
+        <td>Java Programming</td>
+    </tr>
+</table>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our specialization</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">SQL(BACKEND)</a></li>
+                    <li><a href="#">DATA CENTER</a></li>
+                    <li><a href="#">Cybersecurity </a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Our college provides quality education through BCA, B.Com, and BBA courses, along with practical skills, modern facilities, experienced faculty, and career opportunities.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Your Email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Basic footer</p>
+            <p>Design by Abhiram</p>
+        </div>
+    </footer>
+</body>
+</html>
